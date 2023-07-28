@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,39 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Elegant Black Color Palette with Subtle Bluish Gradient */
+
+/* Primary black color */
+:root {
+  --black: #000000;
+}
+
+/* Bluish color in the middle */
+:root {
+  --bluish: #1a1a2e; /* Adjust the bluish color as per your preference */
+}
+
+/* Gradient Background */
+body {
+  background: linear-gradient(
+    to bottom,
+    var(--black) 0%,
+    var(--bluish) 50%,
+    var(--black) 100%
+  );
+  height: 100vh;
+  margin: 0;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  font-family: Arial, sans-serif;
+  color: white; /* Set font color for better readability against the dark background */
 }

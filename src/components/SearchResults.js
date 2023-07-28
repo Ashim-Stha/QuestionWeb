@@ -1,10 +1,10 @@
 import React from "react";
 import Home from "./Home";
 
-const SearchResults = ({ results }) => {
+const SearchResults = ({ results, search, setSearch }) => {
   return (
     <>
-      <Home />
+      <Home search={search} setSearch={setSearch} />
       <ul>
         {results.slice(0, 3).map((result) =>
           result ? (

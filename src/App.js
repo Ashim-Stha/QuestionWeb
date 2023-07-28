@@ -31,21 +31,29 @@ function App() {
   }, [results]);
 
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route
-          path="/"
-          element={<Home search={search} setSearch={setSearch} />}
-        />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route
-          path="/searchresults"
-          element={<SearchResults results={results} />}
-        />
-      </Routes>
-    </Router>
+    <body>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route
+            path="/"
+            element={<Home search={search} setSearch={setSearch} />}
+          />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route
+            path="/searchresults"
+            element={
+              <SearchResults
+                results={results}
+                search={search}
+                setSearch={setSearch}
+              />
+            }
+          />
+        </Routes>
+      </Router>
+    </body>
   );
 }
 
